@@ -51,6 +51,6 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="end"
-            android:src="@drawable/ic_question_mark" />
+            android:src="@drawable/ic_star_unfilled" />
     </LinearLayout>
 </LinearLayout>

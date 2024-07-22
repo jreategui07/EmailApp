@@ -41,10 +41,14 @@ class MainActivity : AppCompatActivity(), ClickDetectorInterface {
     }
 
     override fun onRowClicked(position: Int) {
-        this.snackbarHelper.showSnackbar("Row clicked")
+        this.emailList.removeAt(position)
+        this.adapter.notifyDataSetChanged()
+        this.snackbarHelper.showSnackbar("Email deleted.")
     }
 
     override fun onImportanceClicked(position: Int) {
-        this.snackbarHelper.showSnackbar("Img clicked")
+        this.emailList[position].isImportant = !this.emailList[position].isImportant
+        this.adapter.notifyDataSetChanged()
+        this.snackbarHelper.showSnackbar("Status updated.")
     }
 }

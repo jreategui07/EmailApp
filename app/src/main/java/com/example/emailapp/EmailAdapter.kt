@@ -39,8 +39,8 @@ class EmailAdapter(
         }
         Glide.with(context)
             .load(importanceImage)
-            .placeholder(R.drawable.ic_question_mark)
-            .error(R.drawable.ic_question_mark)
+            .placeholder(R.drawable.ic_star_unfilled)
+            .error(R.drawable.ic_star_unfilled)
             .into(holder.binding.ivImportant)
 
         holder.binding.parentLayout.setOnClickListener {
